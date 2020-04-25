@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>utilityjunction</title>
+    
+    <meta name="description" content="utilityjunction dashboard" />    
+    <meta name="author" content="Augusto Martinez" />
+		<!-- link to main stylesheets -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/fontawesome.css" type="text/css" />
+    <link rel="stylesheet" href="css/global.css" type="text/css" />
+    
+    <!-- scripts -->    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+	</head>
+	<body>
+   <!-- HTML start -->
+    <header class="bg-header bg-primary">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="brand">
+              <a href="/utility-junction-alt"/>
+                <img src="img/logo.png" alt="Logo" />
+              </a>
+            </div>
+            <h1 class="sr-only">
+              utilities dashboard
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+		
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4 col-md-3">
+            <div class="user-profile">
+              <div class="user-pic">
+                <img src="img/profile-pic.png" alt="User pic"/>
+              </div>
+              <div class="user-info">
+                <h4>
+                  Johnson Angelina
+                </h4>
+                <p>
+                  <small>Abc Company, CEO</small>
+                </p>
+              </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+              <ul class="list-unstyled">
+                <li><a href="#" title="My Profile"><span class="icon"><i class="fa fa-user-o" aria-hidden="true"></i></span> My Profile</a></li>
+                <li><a href="#" title="Notifications"><span class="icon"><i class="fa fa-bell-o" aria-hidden="true"></i></span> Notificactions <span class="alert">5</span></a></li>
+                <li><a href="#" title="Search"><span class="icon"><i class="fa fa-search" aria-hidden="true"></i></span> Search</a></li>
+                <li><a href="#" title="Settings"><span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span> Settings</a></li>
+              </ul>
+            </nav>
+                     
+            <nav class="bottom-nav">
+              <ul class="list-unstyled">
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </nav>
+            
+          </div><!-- /left panel -->
+          
+          <div class="col-sm-8 col-md-5">
+            <div class="tab-pane fade in active">
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#menu-1">Summary</a></li>
+                <li><a data-toggle="tab" href="#menu-2">Electricity</a></li>
+                <li><a data-toggle="tab" href="#menu-3">Water</a></li>
+                <li><a data-toggle="tab" href="#menu-4">Gas</a></li>
+                <li><a data-toggle="tab" href="#menu-5">Sewer</a></li>
+                <li><a data-toggle="tab" href="#menu-6">Trash</a></li>
+                <li><a data-toggle="tab" href="#menu-7">Other 1</a></li>                
+              </ul>
+              
+              <div class="tab-content">
+                <div id="menu-1" class="tab-pane fade in active">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>
+                        Property details
+                      </h2>
+                    </div>
+                    <div class="tab-body">
+                      <div class="address">
+                        <h3>
+                          Address  
+                        </h3>
+                        <p>
+                          906 Oak West
+                        </p>
+                        <p>
+                          Houston TX, 77073
+                        </p>
+                      </div>
+                      
+                      <div class="company-title">
+                        <h3>
+                          Title company
+                        </h3>
+                        
+                        <p>
+                          Aqua Property Development, LLC, Penn Stewart
+                        </p>
+                      </div>
+                      
+                      <div class="description-section">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="description">
+                              <h3>
+                                Description
+                              </h3>
+                              
+                              <p>
+                                1,820 sqft, 4 bedrooms &amp; 2.5 Bathroom built in 1998 and have central AC, fireplace &amps; garage parking.
+                              </p>                              
+                            </div>
+                          </div>
+                          
+                          <div class="col-sm-6">
+                            <div class="appliances">
+                              <h3>
+                                Appliances
+                              </h3>
+                              
+                              <p>
+                                You don't have any appliances for this property right now.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div><!-- /.description -->
+                      
+                      <div class="gallery">
+                        <ul class="photo-list">
+                          <li></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /#menu-1 -->
+                
+                <div id="menu-2" class="tab-pane fade">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>Electricity details</h2>
+                    </div>
+                    <div class="tab-body">
+                      
+                    </div>
+                  </div>
+                </div><!-- /#menu-2 -->
+            </div><!-- /.tab-content -->
+          </div>
+        </div><!-- /center panel -->
+        
+        <div class="col-sm-12 col-md-4">
+          <div class="top-btns">
+            <button type="button" class="btn btn-connect">Connect all</button>
+            <button type="button" class="btn btn-disconnect">Disconnect all</button>
+          </div>
+          
+          <div class="tab-wrapper">
+            <div class="tab-heading">
+              <h3>
+                Manage all utilities
+              </h3>
+            </div>
+            
+            <div class="tab-body">
+              
+            </div>
+          </div>
+        </div><!-- /right panel -->
+      </div>
+    </section>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>    
+    <script src="js/chart.js"></script>
+  </body>
+</html>
