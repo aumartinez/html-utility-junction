@@ -190,6 +190,10 @@ header .home-link {
   margin-left: -15px;
 }
 
+#navbar-sidebar .sidebar-nav {
+  transition: margin-bottom 0.2s;
+}
+
 /* Center column */
 
 .nav-tabs {
@@ -254,6 +258,7 @@ header .home-link {
   margin-top: 15px;
   overflow: hidden;
   background-color: #fff;
+  min-height: 495px;
 }
 
 .tab-heading h2 {
@@ -421,6 +426,12 @@ header .home-link {
   .sidebar nav {    
     padding: 45px 0;    
   }
+  
+  .nav-tabs.report-tabs > li.icon > a,
+  .nav-tabs.report-tabs > li.icon > a.active {
+    padding: 0;
+    font-size: 22px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -474,6 +485,12 @@ header .home-link {
   .nav-tabs.report-tabs > li > a {
     font-size: 10px;
     padding: 10px 5px 15px;
+  }
+  
+  .nav-tabs.report-tabs > li.icon > a,
+  .nav-tabs.report-tabs > li.icon > a.active {
+    padding: 0;
+    font-size: 22px;
   }
 }
 
