@@ -2,6 +2,8 @@
 
 html {
   min-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -10,14 +12,16 @@ body {
   font-size: 14px;
   color: #343A40;
   min-height: 100vh;
+  padding: 0;
+  margin: 0;
 }
 
-body.bg-body {
+.bg-body {
   background-image: url("../img/bg-body.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
-  background-size: contain;
+  background-size: cover;
 }
 
 /* Globals */
@@ -43,6 +47,10 @@ h2 {
 
 h3 {
   font-size: 22px;
+}
+
+* {
+  transition: font-size 0.5s;
 }
 
 /* Helpers */
@@ -287,7 +295,7 @@ header .home-link {
 .top-btns {
   height: 75px;
   padding-top: 18px;
-  text-align: right;  
+  text-align: center;  
 }
 
 .top-btns button{
@@ -409,13 +417,13 @@ header .home-link {
   .gallery ul > li {    
     max-width: 32%;    
   }
+  
+  .sidebar nav {    
+    padding: 45px 0;    
+  }
 }
 
 @media (min-width: 992px) {
-  .sidebar nav {
-    padding: 45px 0;
-  }
-  
   .nav-tabs.report-tabs > li.tab {
     display: block;
     float: none;
@@ -423,6 +431,16 @@ header .home-link {
   
   .nav-tabs.report-tabs > li.icon {
     margin-bottom: 10px;
+  }
+  
+  .top-btns {
+    text-align: right;
+  }
+  
+  .flex-column-md {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -438,6 +456,42 @@ header .home-link {
   
   .nav-tabs.report-tabs > li.icon {
     margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 26px;
+  }
+
+  .nav-tabs.utilities > li.active > a:hover,
+  .nav-tabs.utilities > li.active > a,
+  .nav-tabs.utilities > li > a {
+    font-size: 15px;
+  }
+  
+  .nav-tabs.report-tabs > li.active > a,
+  .nav-tabs.report-tabs > li > a {
+    font-size: 10px;
+    padding: 10px 5px 15px;
+  }
+}
+
+@media (min-width: 1366px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .nav-tabs.utilities > li.active > a:hover,
+  .nav-tabs.utilities > li.active > a,
+  .nav-tabs.utilities > li > a {
+    font-size: 18px;    
+  }
+  
+  .nav-tabs.report-tabs > li.active > a,
+  .nav-tabs.report-tabs > li > a {
+    font-size: 12px;
+    padding: 10px 10px 15px;
   }
 }
 
