@@ -384,6 +384,8 @@ header .home-link {
   color: #fff;
   border-radius: 5px;
   height: 35px;
+  font-size: 18px;
+  padding: 4px;
 }
 
 .chart-toggle > ul.dropdown-menu {
