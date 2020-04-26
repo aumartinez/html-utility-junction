@@ -1,8 +1,11 @@
 //JS Script
 
 window.addEventListener("load", run, false);
-window.addEventListener("load", trackSidebar, false);
+window.addEventListener("DOMContentLoaded", trackSidebar, false);
 window.addEventListener("resize", trackSidebar, false);
+window.addEventListener("load", function(){
+  let resizeSidebar = setInterval(trackSidebar, 500);
+}, false);
 
 function run() {
   
@@ -141,29 +144,28 @@ function run() {
 }
 
 function trackSidebar() {
-      
-  let headerHeight = document.querySelector("header").offsetHeight;
-  let sidebarHeight = document.querySelector("#navbar-sidebar").offsetHeight;
-  
-  let docBottMargin = document.body.clientHeight - headerHeight - sidebarHeight;
-  let winBottMargin = window.innerHeight - headerHeight - sidebarHeight;
-  
-  let sidebar = document.querySelector("#navbar-sidebar .sidebar-nav");
-  
-  if (window.innerWidth < 768) {
-    return;
-  }
-  else if (window.innerWidth < 992) {    
-    let center = document.querySelector(".center-column");
-    let docBottMargin = center.offsetHeight - sidebarHeight;
     
-    sidebar.style.marginBottom = docBottMargin + "px";
-  }
-  else if (document.body.clientHeight > window.innerHeight) {
-    sidebar.style.marginBottom = docBottMargin + "px";
+  let headerHeight = document.querySelector("header").offsetHeight;
+  let sidebar = document.querySelector("#navbar-sidebar");
+  let bottomMargin = parseInt(window.getComputedStyle(sidebar.querySelector(".sidebar-nav"), null).marginBottom);
+  
+  if (window.innerWidth > 991) {
+    let currHeight = headerHeight + sidebar.offsetHeight;
+            
+    if (window.innerHeight > currHeight && bottomMargin == 0) {
+      bottomMargin = window.innerHeight - currHeight;
+      return sidebar.querySelector(".sidebar-nav").style.marginBottom = bottomMargin + "px";
+    }
+    if (bottomMargin > 0){
+      newMargin = window.innerHeight - currHeight;
+      return sidebar.querySelector(".sidebar-nav").style.marginBottom = bottomMargin + newMargin + "px";
+    }
+    else {
+      return sidebar.querySelector(".sidebar-nav").style.marginBottom = "0px";
+    }
   }
   else {
-    sidebar.style.marginBottom = winBottMargin + "px";
+    return sidebar.querySelector(".sidebar-nav").style.marginBottom = "0px";
   }
   
 }
