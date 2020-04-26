@@ -2,7 +2,6 @@
 
 window.addEventListener("load", run, false);
 window.addEventListener("DOMContentLoaded", trackSidebar, false);
-window.addEventListener("resize", trackSidebar, false);
 window.addEventListener("load", function(){
   let resizeSidebar = setInterval(trackSidebar, 500);
 }, false);
@@ -19,6 +18,10 @@ function run() {
 
   function loadBarChart() {
     let ctx = document.querySelector("#bar-chart-canvas").getContext("2d");
+    let gradBar = ctx.createLinearGradient(0, 0, 0, 300);
+    gradBar.addColorStop(0, "rgb(1, 87, 113)");
+    gradBar.addColorStop(1, "rgb(9, 122, 157)");
+    
     let chart = new Chart (ctx,{
       type: "bar",
       data: {
@@ -26,7 +29,7 @@ function run() {
         datasets: [{
           label: "Months",
           data: getData(),
-          backgroundColor: "rgb(9, 122, 157)",
+          backgroundColor: gradBar,
           borderColor: "rgb(9, 122, 157)",
           borderWidth: 0
         }]
@@ -37,8 +40,8 @@ function run() {
           position: "bottom"
         },
         plugins:{
-          labels: {
-            render: "value"
+          datalabels: {
+            color: "#fff"
           }
         },
         scales: {
@@ -66,20 +69,28 @@ function run() {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
         datasets: [{
           label: "Months",
-          data: getData(),          
+          data: getData(),
+          backgroundColor: "rgba(255,255,255,0)",
           borderColor: "rgb(9, 122, 157)",
           borderWidth: 0
         }]
       },
       options: {
+        beizerCurve: false,
+        elements : {
+          line: {
+            tension: 0
+          }
+        }, 
+        plugins:{
+          datalabels: {
+            align: "end",
+            offset: 5
+          }
+        },
         legend: {
           display: true,
           position: "bottom"
-        },
-        plugins:{
-          labels: {
-            render: "value"
-          }
         },
         scales: {
           yAxes: [{
@@ -89,6 +100,7 @@ function run() {
             },
             ticks: {
               min: 0,
+              max: 100,
               begitAtZero: true
             }
           }]
@@ -119,17 +131,9 @@ function run() {
       },
       options: {
         plugins: {
-          labels: [
-          {
-            render: "label",
-            position: "outside",
-            padding: "5px"
-          },
-          {
-            render: "percentage",
-            fontColor: "#fff"
-          }
-          ]
+          datalabels: {
+            color: "#fff"
+          }  
         }
       }
     });
