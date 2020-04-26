@@ -160,7 +160,7 @@ function trackSidebar() {
       bottomMargin = window.innerHeight - currHeight;
       return sidebar.querySelector(".sidebar-nav").style.marginBottom = bottomMargin + "px";
     }
-    if (bottomMargin > 0){
+    if (window.innerHeight >= currHeight && bottomMargin > 0){
       newMargin = window.innerHeight - currHeight;
       return sidebar.querySelector(".sidebar-nav").style.marginBottom = bottomMargin + newMargin + "px";
     }
