@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>utilityjunction</title>
+    <title>utilityjunction</title>
     
     <meta name="description" content="utilityjunction dashboard" />    
     <meta name="author" content="Augusto Martinez" />
@@ -23,14 +23,14 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 	</head>
-	<body>
+	<body class="bg-body">
    <!-- HTML start -->
-    <header class="bg-header bg-primary">
+    <header class="bg-header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-xs-12">
-            <div class="brand">
-              <a href="/utility-junction-alt"/>
+          <div class="col-xs-6 col-sm-4 col-md-3">
+            <div class="brand pull-left">
+              <a href="/utility-junction-alt/" title="Home">
                 <img src="img/logo.png" alt="Logo" />
               </a>
             </div>
@@ -38,14 +38,19 @@
               utilities dashboard
             </h1>
           </div>
+          <div class="col-xs-6 col-sm-8">
+            <span class="right-xs">
+              <a href="/utility-junction-alt/" title="Home"><i class="fa fa-home home-link" aria-hidden="true"></i><span class="sr-only">Home</span></a>
+            </span>
+          </div>
         </div>
       </div>
     </header>
 		
     <section>
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-4 col-md-3">
+        <div class="row base-row">
+          <div id="navbar-sidebar" class="col-sm-4 col-md-3 bg-sidebar sidebar">
             <div class="user-profile">
               <div class="user-pic">
                 <img src="img/profile-pic.png" alt="User pic"/>
@@ -71,22 +76,21 @@
                      
             <nav class="bottom-nav">
               <ul class="list-unstyled">
-                <li><a href="#">Logout</a></li>
+                <li><a href="#"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span> Logout</a></li>
               </ul>
             </nav>
             
           </div><!-- /left panel -->
           
-          <div class="col-sm-8 col-md-5">
+          <div class="col-sm-8 col-md-5 center-column">
             <div class="tab-pane fade in active">
-              <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#menu-1">Summary</a></li>
-                <li><a data-toggle="tab" href="#menu-2">Electricity</a></li>
-                <li><a data-toggle="tab" href="#menu-3">Water</a></li>
-                <li><a data-toggle="tab" href="#menu-4">Gas</a></li>
-                <li><a data-toggle="tab" href="#menu-5">Sewer</a></li>
-                <li><a data-toggle="tab" href="#menu-6">Trash</a></li>
-                <li><a data-toggle="tab" href="#menu-7">Other 1</a></li>                
+              <ul class="nav nav-tabs utilities">
+                <li class="active"><a data-toggle="tab" href="#menu-1" title="Summary">Summary</a></li>
+                <li><a data-toggle="tab" href="#menu-2" title="Electricity">Electricity</a></li>
+                <li><a data-toggle="tab" href="#menu-3" title="Water">Water</a></li>
+                <li><a data-toggle="tab" href="#menu-4" title="Gas">Gas</a></li>
+                <li><a data-toggle="tab" href="#menu-5" title="Sewer">Sewer</a></li>
+                <li><a data-toggle="tab" href="#menu-6" title="Trash">Trash</a></li>
               </ul>
               
               <div class="tab-content">
@@ -95,7 +99,11 @@
                     <div class="tab-heading">
                       <h2>
                         Property details
-                      </h2>
+                        <span class="pull-right">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                        </span>
+                      </h2>                      
+                      <div class="clearfix"></div>
                     </div>
                     <div class="tab-body">
                       <div class="address">
@@ -103,10 +111,8 @@
                           Address  
                         </h3>
                         <p>
-                          906 Oak West
-                        </p>
-                        <p>
-                          Houston TX, 77073
+                          <span>906 Oak West</span><br />
+                          <span>Houston TX, 77073</span>
                         </p>
                       </div>
                       
@@ -129,7 +135,7 @@
                               </h3>
                               
                               <p>
-                                1,820 sqft, 4 bedrooms &amp; 2.5 Bathroom built in 1998 and have central AC, fireplace &amps; garage parking.
+                                1,820 sqft, 4 bedrooms &amp; 2.5 Bathroom built in 1998 and have central AC, fireplace &amp; garage parking.
                               </p>                              
                             </div>
                           </div>
@@ -149,8 +155,16 @@
                       </div><!-- /.description -->
                       
                       <div class="gallery">
-                        <ul class="photo-list">
-                          <li></li>
+                        <ul class="photo-gallery list-unstyled list-inline">
+                          <li>
+                            <img src="img/house-01.png" alt="House image" />
+                          </li>
+                          <li>
+                            <img src="img/house-02.png" alt="House image" />
+                          </li>
+                          <li>
+                            <img src="img/house-03.png" alt="House image" />
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -160,18 +174,72 @@
                 <div id="menu-2" class="tab-pane fade">
                   <div class="tab-wrapper">
                     <div class="tab-heading">
-                      <h2>Electricity details</h2>
+                      <h2>Electricity service details</h2>
                     </div>
                     <div class="tab-body">
-                      
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
                     </div>
                   </div>
                 </div><!-- /#menu-2 -->
+                
+                <div id="menu-3" class="tab-pane fade">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>Water Service details</h2>
+                    </div>
+                    <div class="tab-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- /#menu-3 -->
+                
+                <div id="menu-4" class="tab-pane fade">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>Gas service details</h2>
+                    </div>
+                    <div class="tab-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- /#menu-4 -->
+                
+                <div id="menu-5" class="tab-pane fade">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>Sewer service details</h2>
+                    </div>
+                    <div class="tab-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- /#menu-5 -->
+                
+                <div id="menu-6" class="tab-pane fade">
+                  <div class="tab-wrapper">
+                    <div class="tab-heading">
+                      <h2>Trash service details</h2>
+                    </div>
+                    <div class="tab-body">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- /#menu-6 -->
             </div><!-- /.tab-content -->
           </div>
         </div><!-- /center panel -->
         
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4 right-column">
           <div class="top-btns">
             <button type="button" class="btn btn-connect">Connect all</button>
             <button type="button" class="btn btn-disconnect">Disconnect all</button>
@@ -179,13 +247,73 @@
           
           <div class="tab-wrapper">
             <div class="tab-heading">
-              <h3>
+              <h2 class="text-center">
                 Manage all utilities
-              </h3>
+              </h2 >
             </div>
             
             <div class="tab-body">
-              
+              <div class="tab-pane fade in active">
+                <ul class="nav nav-tabs report-tabs">
+                  <li class="tab active">
+                    <a data-toggle="tab" href="#util-1" title="Electricity">Electricity</a>
+                  </li>
+                  <li class="tab">
+                    <a data-toggle="tab" href="#util-2" title="Water">Water</a>
+                  </li>
+                  <li class="icon">
+                    <a data-toggle="tab" href="#util-1" title="Electricity" class="active"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="icon">
+                    <a data-toggle="tab" href="#util-2" title="Water"><i class="fa fa-tint" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="icon">
+                    <a data-toggle="tab" href="#util-3" title="Gas" class="active"><i class="fa fa-fire" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="icon">
+                    <a data-toggle="tab" href="#util-4" title="Sewer" class="active"><i class="fa fa-code-fork" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="icon">
+                    <a data-toggle="tab" href="#util-5" title="Trash" class="active"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="dropdown chart-toggle">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Chart picker"><i class="fa fa-bar-chart" aria-hidden="true"></i> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a id="bar-chart" href="#bar-chart-canvas"><span><i class="fa fa-bar-chart" aria-hidden="true"></i></span> Bar chart</a>
+                        <a id="line-chart" href="#line-chart-canvas"><span><i class="fa fa-line-chart" aria-hidden="true"></i></span> Linear chart</a>
+                        <a id="pie-chart" href="#pie-chart-canvas"><span><i class="fa fa-pie-chart" aria-hidden="true"></i></span> Pie chart</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <div class="tab-content">
+                  <div id="util-1" class="tab-pane fade in active">
+                    <div class="chart-wrapper">
+                      <canvas id="bar-chart-canvas" class="active" width="400" height="400">
+                        Your browser does not support canvas to display the charts
+                      </canvas>
+                      
+                      <canvas id="line-chart-canvas" class="" width="400" height="400">
+                        Your browser does not support canvas to display the charts
+                      </canvas>
+                      
+                      <canvas id="pie-chart-canvas" class="" width="400" height="400">
+                        Your browser does not support canvas to display the charts
+                      </canvas>
+                    </div>
+                  </div><!-- /#menu-1 -->
+                  
+                  <div id="util-2" class="tab-pane fade">
+                    <div class="chart-wrapper">
+                      <p>
+                        Water report here
+                      </p>
+                    </div>
+                  </div><!-- /#menu-2 -->
+                </div><!-- /.tab-content -->
+              </div>
             </div>
           </div>
         </div><!-- /right panel -->
@@ -197,5 +325,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>    
     <script src="js/chart.js"></script>
+    <script src="js/chartjs-plugin-labels.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
