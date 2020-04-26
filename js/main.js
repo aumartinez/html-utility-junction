@@ -3,7 +3,6 @@
 window.addEventListener("load", run, false);
 window.addEventListener("load", trackSidebar, false);
 window.addEventListener("resize", trackSidebar, false);
-window.addEventListener("click", trackSidebar, false);
 
 function run() {
   
@@ -176,8 +175,7 @@ function changeChart(event) {
   let canvasList = document.querySelectorAll(".chart-wrapper > canvas");
   removeClassFromList(canvasList, "active");
       
-  addClass(elem, "active");
-  trackSidebar();
+  addClass(elem, "active");  
 }
 
 function removeClassFromList(list, myClass) {
