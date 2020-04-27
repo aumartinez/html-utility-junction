@@ -99,6 +99,21 @@ header .home-link {
   font-size: 36px;
 }
 
+.navbar-toggle {
+  border-radius: 0;
+  margin-top: 32px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+}
+
+.navbar-toggle .icon-bar+.icon-bar {
+  margin-top: 5px;
+}
+
 /* Sidebar */
 
 .bg-sidebar {
@@ -382,11 +397,11 @@ header .home-link {
 .nav-tabs.report-tabs > li.chart-toggle > a {
   background-color: #0088b1;
   color: #fff;
+  box-sizing: border-box;
   border-radius: 5px;
-  height: 35px;
   font-size: 18px;
   padding: 4px;
-  box-sizing: border-box;
+  height: 35px;
   width: 35px;
 }
 
@@ -425,11 +440,16 @@ header .home-link {
 /* Mobile only classes */
 @media (max-width: 767px) {
   .right-xs {
-    float: right;
+    text-align: right;
   }
 }
 
 @media (min-width: 768px) {
+  #navbar-sidebar.collapse {
+    display: block;
+    height: auto;
+  }
+  
   .gallery ul > li {    
     max-width: 32%;    
   }
@@ -459,16 +479,47 @@ header .home-link {
     text-align: right;
   }
   
-  .flex-column-md {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .nav-tabs.report-tabs > li.icon > a, 
+  .nav-tabs.report-tabs > li.icon > a.active {
+    font-size: 18px;
+  }
+  
+  .nav-tabs.report-tabs > li.icon > a,
+  .nav-tabs.report-tabs > li.icon > a.active {   
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;    
+  }
+  
+  .nav-tabs.report-tabs > li.chart-toggle > a {    
+    height: 30px;
+    width: 30px;
+  }
+  
+  .nav-tabs.report-tabs > li.chart-toggle > a {    
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1200px) {
+  h2 {
+    font-size: 26px;
+  }
+  
   .sidebar nav {
     padding: 45px 10px;
+  }
+  
+  .nav-tabs.utilities > li.active > a:hover,
+  .nav-tabs.utilities > li.active > a,
+  .nav-tabs.utilities > li > a {
+    font-size: 15px;
+  }
+  
+  .nav-tabs.report-tabs > li.active > a,
+  .nav-tabs.report-tabs > li > a {
+    font-size: 10px;
+    padding: 10px 5px 15px;
   }
   
   .nav-tabs.report-tabs > li.tab {
@@ -507,25 +558,47 @@ header .home-link {
 
 @media (min-width: 1366px) {
   h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .nav-tabs.utilities > li.active > a:hover,
   .nav-tabs.utilities > li.active > a,
   .nav-tabs.utilities > li > a {
-    font-size: 18px;    
+    font-size: 16px;    
   }
   
   .nav-tabs.report-tabs > li.active > a,
   .nav-tabs.report-tabs > li > a {
     font-size: 12px;
     padding: 10px 10px 15px;
+  }  
+}
+
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 28px;
+  }
+  
+  .nav-tabs.utilities > li.active > a:hover,
+  .nav-tabs.utilities > li.active > a,
+  .nav-tabs.utilities > li > a {
+    font-size: 18px;    
+  }
+  
+  .nav-tabs.report-tabs > li.icon > a,
+  .nav-tabs.report-tabs > li.icon > a.active {   
+    width: 35px;
+    height: 35px;
+    margin-right: 2px;    
+  }
+  
+  .nav-tabs.report-tabs > li.chart-toggle > a {    
+    width: 35px;
+    height: 35px;
   }
 }
 
 @media (min-width: 1920px) {
-  /* Typography */
-  
   h2 {
     font-size: 36px;
   }
